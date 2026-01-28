@@ -1,162 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ISHU • Profile</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ishu's Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: navy;
+      color: white;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+    }
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+.photo {
+      max-width: 200px;
+      border-radius: 10px;
+    }
+    section {
+      padding: 40px;
+      border-bottom: 1px solid #ffffff33;
+    }
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    section p, section ul {
+      font-size: 18px;
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 5px;
+    }
+footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000033;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand-left">
-      <div class="brand-text">
-        <div class="name-small">Welcome</div>
-        <div class="title">Personal Profile</div>
-      </div>
-    </div>
 
-    <nav class="nav">
-      <button data-target="hero" class="nav-btn">Home</button>
-      <button data-target="skills" class="nav-btn">Skills</button>
-      <button data-target="education" class="nav-btn">Education</button>
-      <button data-target="contact" class="nav-btn">Contact</button>
-    </nav>
+  <header>
+    <h1>ISHU</h1>
+    <img src=""uowork.jpeg"" alt="Ishu's Photo" class="photo" />
   </header>
 
-  <main class="container">
-    <!-- HERO: left content (name, contacts, address, summary, skills) + right profile photo -->
-    <section id="hero" class="panel hero-panel">
-      <div class="panel-inner from-left hero-content">
-        <h1 class="big-name">ISHU</h1>
+  <section>
+    <h2>Contact</h2>
+    <p>Address: VPO Paleas, Bhiwani, Haryana 127021</p>
+  </section>
 
-        <div class="info-block">
-          <h3 class="label">Contact</h3>
-          <p class="info"><strong>Phone:</strong> <a href="tel:+919416509473">+91 9416509473</a></p>
-          <p class="info"><strong>Email:</strong> <a href="mailto:ishurayka45@gmail.com">ishurayka45@gmail.com</a></p>
-        </div>
+  <section>
+    <h2>Education</h2>
+    <p>M.Sc. Computer Science (Pursuing)</p>
+  </section>
 
-        <div class="info-block">
-          <h3 class="label">Address</h3>
-          <p class="info">VPO Palwas, Bhiwani, Haryana 127021</p>
-        </div>
+ <section>
+    <h2>Technical Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+    </ul>
+  </section>
 
-        <div class="info-block">
-          <h3 class="label">Summary</h3>
-          <p class="info muted">Aspiring MSc Computer Science student focused on front-end and scripting with strong fundamentals in HTML, CSS, JavaScript and Python. I build responsive, accessible interfaces and enjoy solving problems through clean code and continuous learning.</p>
-        </div>
+  <section>
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Effective Communication</li>
+      <li>Problem Solving</li>
+      <li>Team Collaboration</li>
+      <li>Adaptability</li>
+      <li>Time Management</li>
+    </ul>
+  </section>
 
-        <div class="info-block">
-          <h3 class="label">Technical Skills</h3>
-          <ul class="skill-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-          </ul>
-        </div>
+  <section>
+    <h2>About Me</h2>
+ <p>
+      I am a passionate and dedicated individual currently pursuing my Master's in Computer Science. I enjoy building websites, solving problems, and learning new technologies. My goal is to contribute meaningfully to the tech community and help others grow through education and collaboration.
+    </p>
+  </section>
 
-        <div class="info-block">
-          <h3 class="label">Soft Skills</h3>
-          <ul class="soft-skills">
-            <li>Effective Communication</li>
-            <li>Teamwork & Collaboration</li>
-            <li>Problem Solving</li>
-            <li>Time Management</li>
-            <li>Adaptability & Continuous Learning</li>
-          </ul>
-        </div>
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li>Portfolio Website – Designed and developed a responsive personal website using HTML, CSS, and JavaScript.</li>
+      <li>Python Quiz App – Built a command-line quiz application to test programming knowledge.</li>
+      <li>CSS Animation Showcase – Created a series of animated UI components using pure CSS.</li>
+    </ul>
+  </section>
 
-        <div class="cta-row">
-          <button class="primary" data-target="contact">Contact Me</button>
-          <button class="ghost" data-target="skills">See All Skills</button>
-        </div>
-      </div>
+  <section>
+    <h2>Goals</h2>
+    <p>
+      My short-term goal is to gain hands-on experience through internships and freelance projects. Long-term, I aim to become a full-stack developer and contribute to open-source platforms while mentoring aspiring coders.
+    </p>
+  </section>
 
-      <div class="panel-decor from-right">
-        <div class="profile-photo" title="Profile photo">
-          <!-- Save your uploaded image as avatar.jpg in the same folder -->
-          <img src="avatar.jpg" alt="Profile photo" onerror="this.style.opacity=0.0; this.style.pointerEvents='none'">
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills section remains as extra detail -->
-    <section id="skills" class="panel">
-      <div class="panel-inner from-right">
-        <h2>Skills — Details</h2>
-        <div class="skill-grid">
-          <div class="skill">
-            <h3>HTML</h3>
-            <p>Semantic structure, accessibility, SEO-friendly markup</p>
-          </div>
-          <div class="skill">
-            <h3>CSS</h3>
-            <p>Responsive layouts, animations, Flexbox & Grid</p>
-          </div>
-          <div class="skill">
-            <h3>JavaScript</h3>
-            <p>DOM manipulation, ES6+, async, small interactive features</p>
-          </div>
-          <div class="skill">
-            <h3>Python</h3>
-            <p>Scripting, data handling, basic backend concepts</p>
-          </div>
-        </div>
-
-        <h3 style="margin-top:1rem">Soft Skills</h3>
-        <ul class="soft-skills">
-          <li>Effective Communication</li>
-          <li>Teamwork & Collaboration</li>
-          <li>Problem Solving</li>
-          <li>Time Management</li>
-          <li>Adaptability & Continuous Learning</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="education" class="panel">
-      <div class="panel-inner from-left">
-        <h2>Education</h2>
-        <div class="edu-card">
-          <h3>MSc Computer Science</h3>
-          <p>Status: Pursuing</p>
-          <p>Focus: Core CS subjects, algorithms, and practical development</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="panel contact-panel">
-      <div class="panel-inner from-right">
-        <h2>Contact</h2>
-        <p>If you'd like to connect, feel free to reach out — I usually respond quickly to email or phone.</p>
-
-        <div class="contact-cards">
-          <div class="contact-card">
-            <h4>Phone</h4>
-            <a href="tel:+919416509473">+91 9416509473</a>
-          </div>
-          <div class="contact-card">
-            <h4>Email</h4>
-            <a href="mailto:ishurayka45@gmail.com">ishurayka45@gmail.com</a>
-          </div>
-          <div class="contact-card">
-            <h4>Address</h4>
-            <address>VPO Palwas, Bhiwani, Haryana 127021</address>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div>© <span id="year"></span> ISHU • Built with HTML, CSS & JavaScript</div>
-    <div class="footer-actions">
-      <button id="prev" title="Previous section">◀</button>
-      <button id="next" title="Next section">▶</button>
-    </div>
+  <footer>
+    &copy; 2026 Ishu | Designed with ❤️ in Bhiwani
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
