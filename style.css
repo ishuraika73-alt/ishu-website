@@ -5,7 +5,7 @@
   --text: #ffffff;
   --muted: rgba(255,255,255,0.78);
   --glass: rgba(255,255,255,0.04);
-  font-family: "Montserrat",system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
 
 *{box-sizing:border-box}
@@ -35,13 +35,8 @@ body{
   background: linear-gradient(90deg, rgba(1,33,67,0.18), rgba(1,20,47,0.06));
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
-
-.brand{display:flex;align-items:center;gap:.7rem}
-.avatar{width:56px;height:56px;border-radius:12px;background:var(--glass);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative;border:1px solid rgba(255,255,255,0.06)}
-.avatar-img{width:100%;height:100%;object-fit:cover;display:block}
-.avatar-fallback{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:0.95}
-.brand-text .name{font-weight:700;letter-spacing:.2px}
-.brand-text .role{font-size:.78rem;color:var(--muted);margin-top:2px}
+.brand-left .title{font-weight:700}
+.brand-left .name-small{font-size:.85rem;color:var(--muted)}
 
 /* Nav */
 .nav{display:flex;gap:.4rem;align-items:center}
@@ -62,7 +57,7 @@ body{
   margin:0 auto;
 }
 
-/* Panels */
+/* PANELS */
 .panel{
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border:1px solid rgba(255,255,255,0.03);
@@ -73,14 +68,46 @@ body{
   gap:1.2rem;
   align-items:center;
   overflow:visible;
-  min-height:220px;
+  min-height:240px;
 }
 .panel-inner{padding:0 0.8rem}
-.panel h1{margin:.1rem 0 0.6rem;font-size:2rem}
+.panel h1, .panel h2{margin:.1rem 0 0.6rem}
 .lead{color:var(--muted);max-width:64ch}
 .quick-contacts{list-style:none;padding:0;margin:1rem 0 0;color:var(--muted)}
-.quick-contacts li{margin:.28rem 0}
 .panel-decor{display:flex;align-items:center;justify-content:center}
+
+/* HERO specifics */
+.hero-panel{min-height:320px}
+.hero-content .big-name{
+  font-size:2.4rem;
+  letter-spacing:1px;
+  margin:0 0 .4rem;
+}
+.info-block{margin-bottom:0.9rem}
+.label{margin:0 0 .25rem;font-size:1rem;color:var(--muted)}
+.info{margin:.12rem 0}
+.muted{color:var(--muted)}
+
+/* profile photo */
+.profile-photo{
+  width:240px;
+  height:240px;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 12px 40px rgba(1,20,47,0.65);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* skill lists */
+.skill-list{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0;margin:0}
+.skill-list li{background:rgba(255,255,255,0.03);padding:.45rem .7rem;border-radius:8px;font-weight:600}
+.soft-skills{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0;margin:0}
+.soft-skills li{background:rgba(255,255,255,0.04);padding:.5rem .7rem;border-radius:999px;font-weight:600}
 
 /* cards and grid */
 .card{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); padding:1.1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
@@ -89,40 +116,14 @@ body{
 .features{display:flex;gap:1rem;margin-top:1rem}
 .feature{flex:1;background:var(--panel-bg);padding:1rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
 
-/* avatar inside panel-decor for larger profile emphasis */
-.panel-decor .profile-photo {
-  width:220px;
-  height:220px;
-  border-radius:14px;
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,0.04);
-  box-shadow: 0 8px 30px rgba(1,20,47,0.6);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-}
-.panel-decor .profile-photo img{width:100%;height:100%;object-fit:cover}
-
-/* soft skills list */
-.soft-skills{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0;margin-top:.6rem}
-.soft-skills li{background:rgba(255,255,255,0.04);padding:.5rem .7rem;border-radius:999px;font-weight:600}
-
-/* contact */
 .contact-cards{display:flex;gap:1rem;margin-top:.6rem;flex-wrap:wrap}
 .contact-card{flex:1;min-width:180px;background:var(--panel-bg);padding:.8rem;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
 .contact-card a{color:var(--text);text-decoration:none;font-weight:600}
-.contact-form{margin-top:1rem;display:grid;gap:.6rem;max-width:680px}
-.contact-form label{display:block}
-.contact-form input, .contact-form textarea{
-  width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
-  background:transparent;color:var(--text)
-}
-.contact-form span{display:block;font-size:.85rem;color:var(--muted);margin-bottom:.28rem}
 
 /* buttons */
 .primary{background:linear-gradient(90deg,var(--accent), #3dd0e0);color:#012a30;border:none;padding:.6rem .9rem;border-radius:9px;font-weight:700;cursor:pointer}
 .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:.5rem .8rem;border-radius:8px;cursor:pointer}
+.cta-row{margin-top:1rem;display:flex;gap:.6rem;flex-wrap:wrap}
 
 /* footer */
 .footer{display:flex;justify-content:space-between;align-items:center;padding:0.9rem 1.2rem;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
@@ -134,12 +135,13 @@ body{
 .in-view{transform:none;opacity:1}
 
 /* responsive */
-@media (max-width:900px){
+@media (max-width:920px){
   .panel{grid-template-columns: 1fr; padding:1rem}
   .panel-decor{order:-1}
+  .profile-photo{width:100%;height:260px;border-radius:10px}
+  .hero-content{padding-bottom:.6rem}
   .skill-grid{grid-template-columns:1fr}
   .features{flex-direction:column}
-  .panel-decor .profile-photo{width:100%;height:240px;border-radius:10px}
 }
 
 /* small polish */

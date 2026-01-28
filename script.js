@@ -1,8 +1,9 @@
-// Small script to add slide-in animations, navigation between sections and next/prev controls
+// Slide-in animations, navigation and next/prev controls
 
 document.addEventListener('DOMContentLoaded', function () {
   // set year
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // IntersectionObserver to reveal panels
   const io = new IntersectionObserver((entries) => {
@@ -11,12 +12,12 @@ document.addEventListener('DOMContentLoaded', function () {
         e.target.querySelectorAll('.from-left, .from-right').forEach(n => n.classList.add('in-view'));
       }
     });
-  }, { threshold: 0.18 });
+  }, { threshold: 0.16 });
 
   document.querySelectorAll('.panel').forEach(p => io.observe(p));
 
   // nav buttons
-  document.querySelectorAll('.nav-btn, .cta .primary').forEach(btn => {
+  document.querySelectorAll('.nav-btn, .cta-row .primary, .cta-row .ghost').forEach(btn => {
     btn.addEventListener('click', (ev) => {
       const target = ev.currentTarget.dataset.target;
       if (target) {
@@ -34,11 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  document.getElementById('next').addEventListener('click', () => {
+  const nextBtn = document.getElementById('next');
+  const prevBtn = document.getElementById('prev');
+  if (nextBtn) nextBtn.addEventListener('click', () => {
     const current = findCurrentSectionIndex();
     scrollToSection(Math.min(sections.length - 1, current + 1));
   });
-  document.getElementById('prev').addEventListener('click', () => {
+  if (prevBtn) prevBtn.addEventListener('click', () => {
     const current = findCurrentSectionIndex();
     scrollToSection(Math.max(0, current - 1));
   });
@@ -55,13 +58,13 @@ document.addEventListener('DOMContentLoaded', function () {
   // keyboard nav
   window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight' || e.key === 'PageDown') {
-      document.getElementById('next').click();
+      if (nextBtn) nextBtn.click();
     } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
-      document.getElementById('prev').click();
+      if (prevBtn) prevBtn.click();
     }
   });
 
-  // small accessibility: focus styles for buttons
+  // focus styles for accessibility
   document.querySelectorAll('button, a').forEach(el => {
     el.addEventListener('focus', () => el.style.outline = '2px solid rgba(25,193,217,0.25)');
     el.addEventListener('blur', () => el.style.outline = 'none');
