@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ishuraika • Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="avatar" aria-hidden="true">
+        <!-- Profile image: save your photo as avatar.jpg in the same folder -->
+        <img src="avatar.jpg" alt="Profile photo" class="avatar-img" onerror="this.style.display='none'">
+        <!-- Fallback SVG if the image is not found -->
+        <svg class="avatar-fallback" width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.2" fill="#ffffff" opacity="0.95"/>
+          <path d="M4 20c0-3.6 3.6-6 8-6s8 2.4 8 6" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="name">Ishuraika</div>
+        <div class="role">MSc Computer Science (Pursuing)</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button data-target="hero" class="nav-btn">Home</button>
+      <button data-target="about" class="nav-btn">About</button>
+      <button data-target="skills" class="nav-btn">Skills</button>
+      <button data-target="education" class="nav-btn">Education</button>
+      <button data-target="contact" class="nav-btn">Contact</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="panel">
+      <div class="panel-inner from-left">
+        <h1>Hello — I'm Ishuraika</h1>
+        <p class="lead">Aspiring software developer with strong full-stack fundamentals. I build clean, accessible and responsive user experiences using HTML, CSS, JavaScript and backend tools including Python.</p>
+
+        <ul class="quick-contacts">
+          <li><strong>Phone:</strong> <a href="tel:+919416509473">+91 9416509473</a></li>
+          <li><strong>Email:</strong> <a href="mailto:ishurayka45@gmail.com">ishurayka45@gmail.com</a></li>
+          <li><strong>Address:</strong> VPO Palwas, Bhiwani, Haryana 127021</li>
+        </ul>
+
+        <div class="cta">
+          <button class="primary" data-target="contact">Contact Me</button>
+          <button class="ghost" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">View Skills</button>
+        </div>
+      </div>
+      <div class="panel-decor from-right" aria-hidden="true">
+        <div class="card">
+          <h3>Key Skills</h3>
+          <p>HTML · CSS · JavaScript · Python</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="panel">
+      <div class="panel-inner from-right">
+        <h2>About Me</h2>
+        <p>I am currently pursuing my MSc in Computer Science and enjoy turning ideas into real, usable interfaces. I focus on building fast, accessible websites and continuously learning new tools and best practices.</p>
+
+        <div class="features">
+          <div class="feature">
+            <h4>Approach</h4>
+            <p>Write semantic markup, craft responsive layouts, and add purposeful interactions.</p>
+          </div>
+          <div class="feature">
+            <h4>Goal</h4>
+            <p>Create reliable software and delightful user experiences.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="panel">
+      <div class="panel-inner from-left">
+        <h2>Technical Skills</h2>
+        <div class="skill-grid">
+          <div class="skill">
+            <h3>HTML</h3>
+            <p>Semantic markup, accessible forms, SEO basics</p>
+          </div>
+          <div class="skill">
+            <h3>CSS</h3>
+            <p>Responsive design, Flexbox, Grid, animations</p>
+          </div>
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <p>DOM, ES6+, async, vanilla and modular patterns</p>
+          </div>
+          <div class="skill">
+            <h3>Python</h3>
+            <p>Basics, scripting, data handling and backend fundamentals</p>
+          </div>
+        </div>
+
+        <h2 style="margin-top:1.6rem;">Soft Skills</h2>
+        <ul class="soft-skills">
+          <li>Effective Communication</li>
+          <li>Teamwork & Collaboration</li>
+          <li>Problem Solving</li>
+          <li>Time Management</li>
+          <li>Adaptability & Continuous Learning</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="education" class="panel">
+      <div class="panel-inner from-right">
+        <h2>Education</h2>
+        <div class="edu-card">
+          <h3>MSc Computer Science</h3>
+          <p>Status: Pursuing</p>
+          <p>Focus: Core CS subjects, algorithms, and practical development</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel contact-panel">
+      <div class="panel-inner from-left">
+        <h2>Contact</h2>
+        <p>If you'd like to connect, feel free to reach out — I usually respond quickly to email or calls.</p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <h4>Phone</h4>
+            <a href="tel:+919416509473">+91 9416509473</a>
+          </div>
+          <div class="contact-card">
+            <h4>Email</h4>
+            <a href="mailto:ishurayka45@gmail.com">ishurayka45@gmail.com</a>
+          </div>
+          <div class="contact-card">
+            <h4>Address</h4>
+            <address>VPO Palwas, Bhiwani, Haryana 127021</address>
+          </div>
+        </div>
+
+        <form class="contact-form" action="#" onsubmit="alert('Form demo — please wire up your backend or use mailto/email client'); return false;">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            <span>Your email</span>
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="4" placeholder="Hi — I'd like to talk about..." required></textarea>
+          </label>
+          <div style="display:flex;gap:.6rem;flex-wrap:wrap">
+            <button class="primary" type="submit">Send message</button>
+            <button class="ghost" type="button" onclick="window.location='mailto:ishurayka45@gmail.com'">Open Email</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>© <span id="year"></span> Ishuraika • Built with HTML, CSS & JavaScript</div>
+    <div class="footer-actions">
+      <button id="prev" title="Previous section">◀</button>
+      <button id="next" title="Next section">▶</button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
