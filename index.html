@@ -1,122 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ishu's Profile</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: navy;
-      color: white;
-      line-height: 1.6;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 40px;
-    }
-    header h1 {
-      font-size: 48px;
-      margin: 0;
-    }
-.photo {
-      max-width: 200px;
-      border-radius: 10px;
-    }
-    section {
-      padding: 40px;
-      border-bottom: 1px solid #ffffff33;
-    }
-    section h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-    section p, section ul {
-      font-size: 18px;
-      margin: 0;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 5px;
-    }
-footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #000033;
-      font-size: 16px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishu Raika | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <header>
-    <h1>ISHU</h1>
-    <img src=" avatar.jpg " alt="Ishu's Photo" class="photo" />
+    <nav class="navbar">
+      <div class="logo">Ishu Raika</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+      <button id="darkModeToggle">🌙</button>
+    </nav>
   </header>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Address: VPO Palwas, Bhiwani, Haryana 127021</p>
+<!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Ishu Raika</h1>
+      <h2><span id="typing"></span></h2>
+      <p>Website Developer | HTML | CSS | JavaScript | Python</p>
+      <a href="#projects" class="btn">View My Projects</a>
+    </div>
+    <div class="hero-img">
+      <img src="images/profile.jpg" alt="Ishu Raika">
+    </div>
   </section>
 
-  <section>
-    <h2>Education</h2>
-    <p>M.Sc. Computer Science (Pursuing)</p>
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am Ishu Raika, a passionate website developer who enjoys creating modern and responsive websites.
+        I work with HTML, CSS, JavaScript, and Python to build clean and functional web projects.
+        I enjoy learning new technologies and improving my development skills.
+      </p>
+    </div>
+  </section>
+<!-- Skills Section -->
+  <section id="skills" class="skills fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fab fa-html5"></i><p>HTML</p></div>
+      <div class="skill-card"><i class="fab fa-css3-alt"></i><p>CSS</p></div>
+      <div class="skill-card"><i class="fab fa-js"></i><p>JavaScript</p></div>
+      <div class="skill-card"><i class="fab fa-python"></i><p>Python</p></div>
+    </div>
   </section>
 
- <section>
-    <h2>Technical Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Python</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Soft Skills</h2>
-    <ul>
-      <li>Effective Communication</li>
-      <li>Problem Solving</li>
-      <li>Team Collaboration</li>
-      <li>Adaptability</li>
-      <li>Time Management</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>About Me</h2>
- <p>
-      I am a passionate and dedicated individual currently pursuing my Master's in Computer Science. I enjoy building websites, solving problems, and learning new technologies. My goal is to contribute meaningfully to the tech community and help others grow through education and collaboration.
-    </p>
-  </section>
-
-  <section>
+  <!-- Projects Section -->
+  <section id="projects" class="projects fade-in">
     <h2>Projects</h2>
-    <ul>
-      <li>Portfolio Website – Designed and developed a responsive personal website using HTML, CSS, and JavaScript.</li>
-      <li>Python Quiz App – Built a command-line quiz application to test programming knowledge.</li>
-      <li>CSS Animation Showcase – Created a series of animated UI components using pure CSS.</li>
-    </ul>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="images/project1.png" alt="Project 1">
+        <h3>Project One</h3>
+        <p>Short description of project one.</p>
+        <a href="#" class="btn">Live Demo</a>
+        <a href="#" class="btn">View Code</a>
+      </div>
+      <div class="project-card">
+        <img src="images/project2.png" alt="Project 2">
+        <h3>Project Two</h3>
+<p>Short description of project two.</p>
+        <a href="#" class="btn">Live Demo</a>
+        <a href="#" class="btn">View Code</a>
+      </div>
+      <div class="project-card">
+        <img src="images/project3.png" alt="Project 3">
+        <h3>Project Three</h3>
+        <p>Short description of project three.</p>
+        <a href="#" class="btn">Live Demo</a>
+        <a href="#" class="btn">View Code</a>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Goals</h2>
-    <p>
-      My short-term goal is to gain hands-on experience through internships and freelance projects. Long-term, I aim to become a full-stack developer and contribute to open-source platforms while mentoring aspiring coders.
-    </p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit" class="btn">Send</button>
+    </form>
+    <p>Email: <a href="mailto:raykaishu5@gmail.com">raykaishu5@gmail.com</a></p>
   </section>
-
+<!-- Footer -->
   <footer>
-    &copy; 2026 Ishu | Designed with ❤️ in Bhiwani
+    <p>&copy; 2026 Ishu Raika | <a href="https://github.com/">GitHub</a> | <a href="mailto:raykaishu5@gmail.com">Email</a></p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
